@@ -21,6 +21,7 @@ pipeline {
 
     stage('Edge') {
       steps {
+        input 'Do you want to continue?'
         sleep 5
         echo 'Edge Tests'
       }
