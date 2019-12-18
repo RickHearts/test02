@@ -4,7 +4,7 @@ pipeline {
     stage('Build & Test') {
       agent {
         node {
-          label 'docker'
+          label 'ubuntu_slave1'
         }
 
       }
@@ -19,7 +19,7 @@ pipeline {
         stage('Report & Publish') {
           agent {
             node {
-              label 'docker'
+              label 'ubuntu_slave1'
             }
 
           }
@@ -33,7 +33,7 @@ pipeline {
         stage('Publishing') {
           agent {
             node {
-              label 'docker'
+              label 'ubuntu_slave1'
             }
 
           }
