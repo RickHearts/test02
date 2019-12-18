@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Chrome') {
+    stage('Browsers') {
       parallel {
         stage('Chrome') {
           agent any
@@ -16,6 +16,13 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('Edge') {
+      steps {
+        sleep 5
+        echo 'Edge Tests'
       }
     }
 
